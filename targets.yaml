@@ -1,0 +1,17 @@
+shared : []
+extern : []
+third-party : []
+
+memstore : [shared, extern]
+
+ctrl : [shared, extern, memory]
+conn : [shared, ctrl, memstore, third-party]
+crypto : [shared, memstore, third-party]
+special : [third-party, shared]
+memory : [special, shared]
+rpc : [shared]
+
+ubft : [shared, crypto, ctrl, conn, extern, memstore, third-party, rpc]
+
+pony : [conn, crypto, ctrl, shared, memstore]
+pony-apps : [ctrl, conn, shared, memstore, rpc, third-party, ubft, special, pony]

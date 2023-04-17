@@ -1,0 +1,17 @@
+#pragma once
+
+#cmakedefine01 SCHEME
+
+#cmakedefine HORS_LOG_SECRETS_PER_SECRET_KEY @HORS_LOG_SECRETS_PER_SECRET_KEY@
+#cmakedefine HORS_SECRETS_PER_SIGNATURE @HORS_SECRETS_PER_SIGNATURE@
+#cmakedefine HORS_SIGNATURES_PER_SECRET_KEY @HORS_SIGNATURES_PER_SECRET_KEY@
+#define HORS_PK_EMBEDDING ${HORS_PK_EMBEDDING}
+#define HORS_LOG_NB_ROOTS ${HORS_LOG_NB_ROOTS}
+
+#cmakedefine WOTS_LOG_SECRETS_DEPTH @WOTS_LOG_SECRETS_DEPTH@
+#cmakedefine01 WOTS_VERIFY_ON_GPU
+
+#cmakedefine01 PRESEND_EDDSA_ONLY
+
+// Also edit ../config.hpp, add `undef` statements to clean the preprocessor
+// namespace Also edit ../../sanity

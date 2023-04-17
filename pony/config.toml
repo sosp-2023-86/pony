@@ -1,0 +1,3 @@
+nic = "mlx5_0"
+mcast_group = "ff12:601b:ffff::1:ff28:cf2a/0xc004"
+procs = [1, 2, 3]
